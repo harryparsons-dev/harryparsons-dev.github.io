@@ -1,2 +1,1 @@
-# harryparsons.github.io
-Personal Website
+# Personal Website
