@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     vue(),
     ui({
-      router: false,
+      router: true,
     }),
   ],
 })

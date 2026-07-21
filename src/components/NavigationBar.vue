@@ -1,19 +1,12 @@
 <script setup>
-defineProps({
-  activePage: {
-    type: String,
-    required: true
-  }
-})
+import { useRoute } from 'vue-router'
 
-const emit = defineEmits({
-  navigate: (page) => ['about', 'project', 'contact'].includes(page)
-})
+const route = useRoute()
 
 const navigationItems = [
-  { label: 'About', value: 'about' },
-  { label: 'Project', value: 'project' },
-  { label: 'Contact', value: 'contact' }
+  { label: 'About', name: 'about' },
+  { label: 'Project', name: 'project' },
+  { label: 'Contact', name: 'contact' }
 ]
 </script>
 
@@ -24,13 +17,13 @@ const navigationItems = [
 
       <nav aria-label="Primary navigation">
         <ul class="flex flex-wrap items-center justify-end gap-1">
-          <li v-for="item in navigationItems" :key="item.value">
+          <li v-for="item in navigationItems" :key="item.name">
             <UButton
               :label="item.label"
+              :to="{ name: item.name }"
               color="neutral"
-              :variant="activePage === item.value ? 'soft' : 'ghost'"
-              :aria-current="activePage === item.value ? 'page' : undefined"
-              @click="emit('navigate', item.value)"
+              :variant="route.name === item.name ? 'soft' : 'ghost'"
+              :aria-current="route.name === item.name ? 'page' : undefined"
             />
           </li>
         </ul>
