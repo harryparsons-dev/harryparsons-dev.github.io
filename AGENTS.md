@@ -73,7 +73,7 @@ Key files:
 * Use the existing Vue, Nuxt UI, Tailwind CSS, and browser capabilities before adding a package.
 * Add a dependency only when the requested behaviour cannot reasonably be implemented using the existing stack.
 * When a dependency is required, explain why it is necessary.
-* Keep changes to `package.json` and `yarn.lock` together.
+* Keep changes to `package.json`
 * Use Yarn because the repository is Yarn-based and includes `yarn.lock`.
 * Do not use npm, pnpm, or Bun, and do not create their lockfiles.
 * Do not upgrade existing dependencies unless the requested work requires it.
