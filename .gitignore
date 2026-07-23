@@ -9,3 +9,4 @@ components.d.ts
 .vscode/*
 !.vscode/extensions.json
 package-lock.json
+yarn.lock

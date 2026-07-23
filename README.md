@@ -5,8 +5,8 @@ Minimal Vue 3 portfolio frontend powered by Vite.
 ## Setup
 
 ```sh
-npm install
-npm run dev
+yarn install
+yarn dev
 ```
 
-Create a production build with `npm run build`.
+Create a production build with `yarn build`.

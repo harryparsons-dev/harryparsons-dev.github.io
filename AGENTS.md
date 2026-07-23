@@ -59,10 +59,11 @@ Key files:
 
 ## Validation
 
-* Run `npm run build` after implementation. This is the repository's current compile-time validation.
-* For visual or interactive changes, also inspect the result using `npm run dev` when browser preview is supported.
-* There are currently no configured lint or test scripts.
-* Do not claim that linting or automated tests were run unless the relevant tooling has been added and the commands were executed.
+* Run `yarn build` after implementation. This is the repository's current compile-time validation.
+* Run `yarn lint` after JavaScript or Vue changes.
+* For visual or interactive changes, also inspect the result using `yarn dev` when browser preview is supported.
+* There are currently no configured test scripts.
+* Do not claim that automated tests were run unless the relevant tooling has been added and the commands were executed.
 * Do not edit generated declaration files such as `auto-imports.d.ts` or `components.d.ts` manually. Allow the configured tooling to regenerate them.
 * If validation fails, determine whether the failure was introduced by the current changes.
 * Report unresolved failures clearly, including the command that failed and a concise summary of the error.
@@ -72,9 +73,9 @@ Key files:
 * Use the existing Vue, Nuxt UI, Tailwind CSS, and browser capabilities before adding a package.
 * Add a dependency only when the requested behaviour cannot reasonably be implemented using the existing stack.
 * When a dependency is required, explain why it is necessary.
-* Keep changes to `package.json` and `package-lock.json` together.
-* Use npm because the repository is npm-based and includes `package-lock.json`.
-* Do not use Yarn, pnpm, or Bun, and do not create their lockfiles.
+* Keep changes to `package.json` and `yarn.lock` together.
+* Use Yarn because the repository is Yarn-based and includes `yarn.lock`.
+* Do not use npm, pnpm, or Bun, and do not create their lockfiles.
 * Do not upgrade existing dependencies unless the requested work requires it.
 
 ## Completion report
