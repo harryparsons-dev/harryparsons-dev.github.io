@@ -6,6 +6,7 @@ const route = useRoute()
 const navigationItems = [
   { label: 'About', name: 'about' },
   { label: 'Projects', name: 'project' },
+  { label: 'Education', name: 'education' },
   { label: 'Contact', name: 'contact' }
 ]
 </script>
