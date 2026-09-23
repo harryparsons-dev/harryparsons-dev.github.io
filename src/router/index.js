@@ -5,7 +5,7 @@ import EducationPage from '../components/pages/EducationPage.vue'
 import ProjectPage from '../components/pages/ProjectPage.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior() {
     return { top: 0 }
   },
