@@ -9,4 +9,6 @@ export default defineConfig({
       router: true,
     }),
   ],
+  base: "/portfolio/",
+
 })
