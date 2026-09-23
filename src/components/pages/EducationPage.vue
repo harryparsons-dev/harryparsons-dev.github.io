@@ -16,34 +16,33 @@ const aLevels = [
 </script>
 
 <template>
-  <section aria-labelledby="education-heading">
-    <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-purple-600">
-      Academic background
+  <section aria-labelledby="education-heading" class="pt-14 sm:pt-20">
+    <p class="eyebrow mb-7">
+      03 / Academic background
     </p>
     <h1
       id="education-heading"
-      class="text-4xl font-bold tracking-tight text-highlighted sm:text-5xl"
+      class="page-title"
     >
       Education
     </h1>
-    <p class="mt-5 max-w-2xl text-lg leading-8 text-muted">
-      A strong foundation in computer science, from core systems and algorithms
-      to full-stack development and artificial intelligence.
+    <p class="body-copy mt-6 max-w-xl">
+      My qualifications and selected university modules.
     </p>
 
     <div class="mt-12 grid gap-6 sm:mt-16">
-      <article class="overflow-hidden rounded-3xl border border-default bg-default shadow-xl shadow-purple-950/5">
-        <div class="p-6 sm:p-10 lg:p-12">
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-purple-600">
-            University
+      <article class="overflow-hidden rounded-xl border border-site-line bg-site-panel">
+        <div class="p-5 sm:p-9">
+          <p class="eyebrow">
+            01 / University
           </p>
 
-          <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div class="mt-5 flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
             <div>
-              <h2 class="text-2xl font-bold tracking-tight text-highlighted sm:text-3xl">
+              <h2 class="text-2xl font-medium tracking-tight sm:text-3xl">
                 University of Birmingham
               </h2>
-              <p class="mt-2 text-lg font-medium text-muted">
+              <p class="body-copy mt-2">
                 BSc Computer Science
               </p>
             </div>
@@ -53,22 +52,22 @@ const aLevels = [
               color="primary"
               variant="soft"
               size="lg"
-              class="w-fit"
+              class="w-fit rounded-full bg-site-accent-soft px-3 py-1.5 text-xs text-site-accent ring-0"
             />
           </div>
 
-          <section class="mt-8 border-t border-default pt-8" aria-labelledby="modules-heading">
-            <h3 id="modules-heading" class="text-lg font-semibold text-highlighted">
+          <section class="mt-8 border-t border-site-line pt-7" aria-labelledby="modules-heading">
+            <h3 id="modules-heading" class="eyebrow">
               Selected modules
             </h3>
             <ul class="mt-4 grid gap-3 sm:grid-cols-2">
               <li
                 v-for="module in modules"
                 :key="module"
-                class="flex items-start gap-3 rounded-xl bg-muted px-4 py-3 text-muted"
+                class="flex items-start gap-3 rounded-md bg-site-inset px-4 py-3 text-sm leading-6 text-site-muted"
               >
                 <span
-                  class="mt-2 size-1.5 shrink-0 rounded-full bg-purple-600"
+                  class="mt-2 size-1.5 shrink-0 rounded-full bg-site-accent"
                   aria-hidden="true"
                 />
                 <span>{{ module }}</span>
@@ -78,13 +77,13 @@ const aLevels = [
         </div>
       </article>
 
-      <article class="rounded-3xl border border-default bg-default p-6 shadow-xl shadow-purple-950/5 sm:p-10 lg:p-12">
+      <article class="rounded-xl border border-site-line bg-site-panel p-5 sm:p-9">
         <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.16em] text-purple-600">
-              A Levels
+            <p class="eyebrow">
+              02 / A Levels
             </p>
-            <h2 class="mt-4 text-2xl font-bold tracking-tight text-highlighted sm:text-3xl">
+            <h2 class="mt-4 text-2xl font-medium tracking-tight sm:text-3xl">
               Exeter School
             </h2>
             <p class="mt-2 text-muted">
@@ -92,7 +91,7 @@ const aLevels = [
             </p>
           </div>
 
-          <p class="font-medium text-muted">
+          <p class="eyebrow">
             2019–2021
           </p>
         </div>
@@ -101,12 +100,12 @@ const aLevels = [
           <div
             v-for="qualification in aLevels"
             :key="qualification.subject"
-            class="rounded-2xl border border-default bg-muted p-5"
+            class="rounded-lg border border-site-line bg-site-inset p-5"
           >
             <dt class="text-sm font-medium text-muted">
               {{ qualification.subject }}
             </dt>
-            <dd class="mt-2 text-2xl font-bold text-highlighted">
+            <dd class="mt-3 text-4xl font-medium tracking-tight text-site-accent">
               {{ qualification.grade }}
             </dd>
           </div>

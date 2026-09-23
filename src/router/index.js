@@ -6,6 +6,9 @@ import ProjectPage from '../components/pages/ProjectPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior() {
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -14,21 +17,25 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
+      meta: { label: 'About' },
       component: AboutPage
     },
     {
       path: '/project',
       name: 'project',
+      meta: { label: 'Projects' },
       component: ProjectPage
     },
     {
       path: '/education',
       name: 'education',
+      meta: { label: 'Education' },
       component: EducationPage
     },
     {
       path: '/contact',
       name: 'contact',
+      meta: { label: 'Contact' },
       component: ContactPage
     }
   ]

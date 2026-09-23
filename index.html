@@ -3,8 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal portfolio" />
-    <title>Portfolio</title>
+    <meta name="description" content="Harry Parsons, software developer. Projects, computer science education, and GitHub profile." />
+    <meta name="theme-color" content="#faf9f6" />
+    <script>
+      (() => {
+        let preference
+        try { preference = localStorage.getItem('portfolio-theme') } catch {}
+        const dark = preference === 'dark' || (preference !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', dark)
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#191a18' : '#faf9f6'
+      })()
+    </script>
+    <title>Harry Parsons — Software Developer</title>
   </head>
   <body>
     <div id="app" class="isolate"></div>

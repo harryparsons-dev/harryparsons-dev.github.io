@@ -1,12 +1,66 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-site-panel: var(--site-panel);
+  --color-site-inset: var(--site-inset);
+  --color-site-sidebar: var(--site-sidebar);
+  --color-site-line: var(--site-line);
+  --color-site-ink: var(--site-ink);
+  --color-site-muted: var(--site-muted);
+  --color-site-accent: var(--site-accent);
+  --color-site-accent-soft: var(--site-accent-soft);
+  --color-site-lavender: var(--site-lavender);
+}
+
 :root {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #1a1a1a;
-  background: #ffffff;
+  --site-page: #faf9f6;
+  --site-panel: #ffffff;
+  --site-sidebar: #f0efe9;
+  --site-inset: #eeede7;
+  --site-line: #deded5;
+  --site-ink: #252620;
+  --site-muted: #69695f;
+  --site-accent: #b84320;
+  --site-accent-soft: #f7e9df;
+  --site-lavender: #eeebf3;
+  --site-button: #252620;
+  --site-button-text: #ffffff;
+  color: var(--site-ink);
+  background: var(--site-page);
+  color-scheme: light;
+  --sidebar-width: 72px;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --site-page: #191a18;
+  --site-panel: #222320;
+  --site-sidebar: #1e1f1c;
+  --site-inset: #2a2b27;
+  --site-line: #41423b;
+  --site-ink: #eeeee6;
+  --site-muted: #b1b2a7;
+  --site-accent: #ef9b78;
+  --site-accent-soft: #493126;
+  --site-lavender: #302c38;
+  --site-button: #e4e5da;
+  --site-button-text: #20211d;
+}
+
+:root, :root.dark {
+  --ui-primary: var(--site-accent);
+  --ui-bg: var(--site-page);
+  --ui-bg-muted: var(--site-inset);
+  --ui-border: var(--site-line);
+  --ui-text: var(--site-ink);
+  --ui-text-highlighted: var(--site-ink);
+  --ui-text-muted: var(--site-muted);
 }
 
 *,
@@ -31,4 +85,24 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+::selection { background: #f7c4ad; color: #252620; }
+:focus-visible { outline: 2px solid var(--site-accent); outline-offset: 5px; }
+.site-main { margin-left: var(--sidebar-width); }
+.eyebrow { font-family: ui-monospace, monospace; font-size: 10px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--site-muted); }
+.page-title { font-size: clamp(1.8rem, 6vw, 5.5rem); font-weight: 500; line-height: 1.04; letter-spacing: -.065em; }
+.body-copy { font-size: 15px; line-height: 1.85; color: var(--site-muted); }
+.action-button { display: inline-flex; max-width: 100%; justify-content: center; align-items: center; gap: clamp(10px, 2vw, 28px); padding: 13px 19px; border-radius: 7px; background: var(--site-button); color: var(--site-button-text); font-size: 12px; font-weight: 500; transition: background 180ms, transform 180ms; }
+.action-button:hover { background: var(--site-accent); transform: translateY(-2px); }
+.text-link { display: inline-flex; align-items: center; gap: 16px; font-size: 12px; font-weight: 500; }
+.text-link:hover { color: var(--site-accent); }
+.tag { display: inline-block; border: 1px solid var(--site-line); border-radius: 5px; padding: 5px 9px; font-family: ui-monospace, monospace; font-size: 10px; color: var(--site-muted); }
+.skip-link { position: fixed; left: 90px; top: -80px; z-index: 100; padding: 12px 20px; background: #252620; color: white; border-radius: 6px; }
+.skip-link:focus { top: 12px; }
+.page-enter { animation: page-in 450ms ease-out both; }
+@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 1024px) { :root { --sidebar-width: 232px; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
