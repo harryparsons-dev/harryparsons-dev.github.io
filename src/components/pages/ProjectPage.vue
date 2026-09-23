@@ -1,3 +1,8 @@
+<script setup>
+import ProjectCard from '../ProjectCard.vue'
+import { projects } from '../../data/projects'
+</script>
+
 <template>
   <section aria-labelledby="projects-heading" class="pt-14 sm:pt-20">
     <p class="eyebrow mb-7">
@@ -155,5 +160,88 @@
         </figure>
       </div>
     </article>
+
+    <section class="mt-16 sm:mt-24" aria-labelledby="more-projects-heading">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <h2 id="more-projects-heading" class="text-3xl font-bold tracking-tight text-highlighted">
+            More projects
+          </h2>
+          <p class="mt-4 max-w-2xl leading-7 text-muted">
+            Learning tools, data visualisation, and personal projects exploring
+            the connection between useful interfaces and the systems behind them.
+          </p>
+        </div>
+        <UButton
+          label="Explore my GitHub"
+          to="https://github.com/harryparsons-dev"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+          variant="outline"
+          size="lg"
+          aria-label="Explore Harry Parsons's GitHub profile (opens in a new tab)"
+        />
+      </div>
+
+      <div class="mt-8 grid gap-6 lg:grid-cols-2">
+        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+      </div>
+
+      <section class="mt-10" aria-labelledby="shares-screenshots-heading">
+        <h3 id="shares-screenshots-heading" class="text-2xl font-semibold tracking-tight text-highlighted">
+          Inside Share Portfolio Reports
+        </h3>
+        <p class="mt-3 leading-7 text-muted">
+          The access-code screen and the form for configuring a new PDF export.
+        </p>
+
+        <div class="mt-6 grid gap-6 sm:grid-cols-2">
+          <figure class="overflow-hidden rounded-3xl border border-default bg-default shadow-lg shadow-purple-950/5">
+            <a
+              href="/images/projects/share-portfolio-reports/login.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full-size Share Portfolio Reports login screenshot in a new tab"
+              class="relative block aspect-[4/3] overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-purple-600"
+            >
+              <img
+                src="/images/projects/share-portfolio-reports/login.png"
+                alt="Shares to PDF login screen with an access-code field and submit button"
+                class="absolute -top-9 left-1/2 w-[900px] max-w-none -translate-x-1/2"
+                width="1440"
+                height="1000"
+                loading="lazy"
+              >
+            </a>
+            <figcaption class="px-5 py-4 text-sm text-muted">
+              Access-code login
+            </figcaption>
+          </figure>
+
+          <figure class="overflow-hidden rounded-3xl border border-default bg-default shadow-lg shadow-purple-950/5">
+            <a
+              href="/images/projects/share-portfolio-reports/upload.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open full-size Share Portfolio Reports upload screenshot in a new tab"
+              class="relative block aspect-[2/3] overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-purple-600 sm:aspect-[4/3]"
+            >
+              <img
+                src="/images/projects/share-portfolio-reports/upload.png"
+                alt="Shares to PDF upload form with fields for a CSV, report title, font size, and padding"
+                class="absolute -top-9 left-1/2 w-[900px] max-w-none -translate-x-1/2"
+                width="1440"
+                height="1000"
+                loading="lazy"
+              >
+            </a>
+            <figcaption class="px-5 py-4 text-sm text-muted">
+              PDF export setup
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+    </section>
   </section>
 </template>
