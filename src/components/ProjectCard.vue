@@ -11,10 +11,10 @@ defineProps({
   <UCard
     as="article"
     :aria-labelledby="`${project.id}-heading`"
-    class="h-full rounded-3xl shadow-lg shadow-purple-950/5"
+    class="glass reveal h-full rounded-3xl ring-0 divide-y-0"
     :ui="{ body: 'flex h-full flex-col p-6 sm:p-8' }"
   >
-    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-purple-600">
+    <p class="text-sm font-semibold uppercase tracking-[0.16em] text-site-accent">
       {{ project.category }}
     </p>
     <h3 :id="`${project.id}-heading`" class="mt-4 text-2xl font-bold tracking-tight text-highlighted">
@@ -32,7 +32,7 @@ defineProps({
 
     <ul class="mt-6 flex flex-wrap gap-2" :aria-label="`${project.title} technologies`">
       <li v-for="technology in project.technologies" :key="technology">
-        <UBadge :label="technology" color="neutral" variant="soft" size="lg" />
+        <span class="tag">{{ technology }}</span>
       </li>
     </ul>
 

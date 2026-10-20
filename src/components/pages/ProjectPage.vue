@@ -10,7 +10,7 @@ import { projects } from '../../data/projects'
     </p>
     <h1
       id="projects-heading"
-      class="page-title"
+      class="page-title text-gradient pb-2"
     >
       Projects
     </h1>
@@ -18,7 +18,7 @@ import { projects } from '../../data/projects'
       Websites and applications I’ve built, with details on the technology and implementation.
     </p>
 
-    <article class="mt-12 overflow-hidden rounded-xl border border-site-line bg-site-panel sm:mt-16">
+    <article class="glass mt-12 overflow-hidden rounded-3xl sm:mt-16">
       <div class="p-5 sm:p-9">
         <div class="eyebrow flex flex-wrap items-center gap-3">
           <span>Client project</span>
@@ -58,7 +58,7 @@ import { projects } from '../../data/projects'
               variant="outline"
               size="lg"
               aria-label="View the Olivia Parsons frontend source on GitHub (opens in a new tab)"
-              class="rounded-md px-5 text-xs"
+              class="rounded-full px-5 text-xs"
             />
           </div>
         </div>
@@ -70,11 +70,11 @@ import { projects } from '../../data/projects'
         </ul>
       </div>
 
-      <figure class="border-y border-site-line bg-site-inset p-5 sm:p-10">
+      <figure class="border-y border-[var(--glass-edge)] bg-[var(--glass-inset)] p-5 sm:p-10">
         <img
           src="/images/projects/olivia-parsons/home.webp"
           alt="Olivia Parsons portfolio homepage displaying a blue figurative drawing"
-          class="aspect-[36/25] w-full rounded-md object-cover object-top shadow-lg"
+          class="aspect-[36/25] w-full rounded-xl object-cover object-top shadow-2xl"
           width="1440"
           height="1000"
         >
@@ -130,12 +130,12 @@ import { projects } from '../../data/projects'
         </section>
       </div>
 
-      <div class="grid gap-5 border-t border-site-line bg-site-sidebar p-5 sm:grid-cols-2 sm:p-9">
+      <div class="grid gap-5 border-t border-[var(--glass-edge)] bg-[var(--glass-inset)] p-5 sm:grid-cols-2 sm:p-9">
         <figure>
           <img
             src="/images/projects/olivia-parsons/gallery.webp"
             alt="The 2025 artwork gallery showing a year filter and a responsive image grid"
-            class="aspect-[36/25] w-full rounded-md border border-site-line object-cover object-top"
+            class="aspect-[36/25] w-full rounded-xl border border-site-line object-cover object-top"
             width="1440"
             height="1000"
             loading="lazy"
@@ -149,7 +149,7 @@ import { projects } from '../../data/projects'
           <img
             src="/images/projects/olivia-parsons/exhibition.webp"
             alt="An exhibition detail page with project text and artwork photography"
-            class="aspect-[36/25] w-full rounded-md border border-site-line object-cover object-top"
+            class="aspect-[36/25] w-full rounded-xl border border-site-line object-cover object-top"
             width="1440"
             height="1000"
             loading="lazy"
@@ -197,13 +197,13 @@ import { projects } from '../../data/projects'
         </p>
 
         <div class="mt-6 grid gap-6 sm:grid-cols-2">
-          <figure class="overflow-hidden rounded-3xl border border-default bg-default shadow-lg shadow-purple-950/5">
+          <figure class="glass reveal overflow-hidden rounded-3xl">
             <a
               href="/images/projects/share-portfolio-reports/login.png"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open full-size Share Portfolio Reports login screenshot in a new tab"
-              class="relative block aspect-[4/3] overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-purple-600"
+              class="relative block aspect-[4/3] overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-site-accent"
             >
               <img
                 src="/images/projects/share-portfolio-reports/login.png"
@@ -219,13 +219,13 @@ import { projects } from '../../data/projects'
             </figcaption>
           </figure>
 
-          <figure class="overflow-hidden rounded-3xl border border-default bg-default shadow-lg shadow-purple-950/5">
+          <figure class="glass reveal overflow-hidden rounded-3xl">
             <a
               href="/images/projects/share-portfolio-reports/upload.png"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open full-size Share Portfolio Reports upload screenshot in a new tab"
-              class="relative block aspect-[2/3] overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-purple-600 sm:aspect-[4/3]"
+              class="relative block aspect-[2/3] overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-site-accent sm:aspect-[4/3]"
             >
               <img
                 src="/images/projects/share-portfolio-reports/upload.png"
