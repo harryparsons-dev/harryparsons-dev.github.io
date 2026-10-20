@@ -22,7 +22,7 @@ const aLevels = [
     </p>
     <h1
       id="education-heading"
-      class="page-title"
+      class="page-title text-gradient pb-2"
     >
       Education
     </h1>
@@ -31,7 +31,7 @@ const aLevels = [
     </p>
 
     <div class="mt-12 grid gap-6 sm:mt-16">
-      <article class="overflow-hidden rounded-xl border border-site-line bg-site-panel">
+      <article class="glass reveal overflow-hidden rounded-3xl">
         <div class="p-5 sm:p-9">
           <p class="eyebrow">
             01 / University
@@ -56,7 +56,7 @@ const aLevels = [
             />
           </div>
 
-          <section class="mt-8 border-t border-site-line pt-7" aria-labelledby="modules-heading">
+          <section class="mt-8 border-t border-[var(--glass-edge)] pt-7" aria-labelledby="modules-heading">
             <h3 id="modules-heading" class="eyebrow">
               Selected modules
             </h3>
@@ -64,7 +64,7 @@ const aLevels = [
               <li
                 v-for="module in modules"
                 :key="module"
-                class="flex items-start gap-3 rounded-md bg-site-inset px-4 py-3 text-sm leading-6 text-site-muted"
+                class="glass-inset flex items-start gap-3 rounded-2xl px-4 py-3 text-sm leading-6 text-site-muted"
               >
                 <span
                   class="mt-2 size-1.5 shrink-0 rounded-full bg-site-accent"
@@ -77,7 +77,7 @@ const aLevels = [
         </div>
       </article>
 
-      <article class="rounded-xl border border-site-line bg-site-panel p-5 sm:p-9">
+      <article class="glass reveal rounded-3xl p-5 sm:p-9">
         <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p class="eyebrow">
@@ -100,7 +100,7 @@ const aLevels = [
           <div
             v-for="qualification in aLevels"
             :key="qualification.subject"
-            class="rounded-lg border border-site-line bg-site-inset p-5"
+            class="glass-inset rounded-2xl p-5"
           >
             <dt class="text-sm font-medium text-muted">
               {{ qualification.subject }}
